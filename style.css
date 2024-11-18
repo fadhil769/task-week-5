@@ -1,0 +1,151 @@
+body {
+  background-color: #f8f9fa;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-height: 100vh;
+}
+
+.resume-container {
+  position: relative;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-height: 100vh;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+
+.profile-img {
+  width: 12.5em;
+  height: auto;
+  border-radius: 50%;
+  object-fit: contain;
+  border: 2px solid teal;
+}
+
+/* Header Section Styles */
+header {
+  border-bottom: 2px solid teal;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .col-12 {
+  text-align: center;
+}
+
+header .col-md-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .col-md-8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1,
+header h3 {
+  margin: 0;
+}
+
+/* Dark Mode Styles */
+[data-bs-theme="dark"] {
+  background-color: #121212;
+  color: white;
+}
+
+[data-bs-theme="dark"] .resume-container {
+  background-color: #333;
+  border-color: #444;
+}
+
+.card {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Print Styles */
+@media print {
+  .resume-container {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .card {
+    page-break-inside: avoid;
+  }
+}
+
+/* Button Styles */
+
+.btn-dark-mode {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  background-color: teal;
+  color: white;
+}
+
+.btn-dark-mode:hover {
+  background-color: #17a085;
+  color: white;
+}
+
+main {
+  min-height: 800px;
+}
+
+.col-md-6 {
+  padding: 15px;
+}
+
+footer {
+  background-color: teal;
+}
+
+@media (max-width: 767px) {
+  header .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  header .col-md-8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resume-container {
+    width: 100%;
+  }
+}
